@@ -1,31 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctnmikdepy2eq"]
+[gd_scene load_steps=4 format=3 uid="uid://ctnmikdepy2eq"]
 
 [ext_resource type="PackedScene" uid="uid://ds7w381nph7a8" path="res://Boids/Boid.tscn" id="1_fvjvj"]
 [ext_resource type="Script" path="res://Scenes/world.gd" id="1_w10f2"]
+[ext_resource type="PackedScene" uid="uid://col8spmcaqexe" path="res://Wall/wall.tscn" id="3_a0vej"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_w10f2")
 
 [node name="Boid" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(750, 1083)
+position = Vector2(754, 500)
 
 [node name="Boid2" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(570, 1090)
+position = Vector2(574, 507)
 
 [node name="Boid3" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(439, 1097)
+position = Vector2(443, 514)
 
 [node name="Boid4" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(313, 1084)
+position = Vector2(317, 501)
 
 [node name="Boid5" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(166, 1125)
+position = Vector2(170, 542)
 
 [node name="Boid6" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(846, 1148)
+position = Vector2(850, 565)
 
 [node name="Boid7" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(906, 1071)
+position = Vector2(910, 488)
 
 [node name="Boid8" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(71, 1062)
+position = Vector2(75, 479)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_a0vej")]
+position = Vector2(-10, 0)
+dimentions = Vector2(20, 700)
+
+[node name="Wall" parent="." instance=ExtResource("3_a0vej")]
+position = Vector2(1160, 0)
+dimentions = Vector2(20, 700)
+
+[node name="Wall2" parent="." instance=ExtResource("3_a0vej")]
+position = Vector2(0, -10)
+dimentions = Vector2(1160, 20)
+
+[node name="Wall3" parent="." instance=ExtResource("3_a0vej")]
+position = Vector2(0, 658)
+dimentions = Vector2(1160, 20)
