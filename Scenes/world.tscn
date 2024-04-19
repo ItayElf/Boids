@@ -7,42 +7,25 @@
 [node name="World" type="Node2D"]
 script = ExtResource("1_w10f2")
 
-[node name="Boid" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(754, 500)
+[node name="Walls" type="Node" parent="."]
 
-[node name="Boid2" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(574, 507)
-
-[node name="Boid3" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(443, 514)
-
-[node name="Boid4" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(317, 501)
-
-[node name="Boid5" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(170, 542)
-
-[node name="Boid6" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(850, 565)
-
-[node name="Boid7" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(910, 488)
-
-[node name="Boid8" parent="." instance=ExtResource("1_fvjvj")]
-position = Vector2(75, 479)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("3_a0vej")]
+[node name="Wall" parent="Walls" instance=ExtResource("3_a0vej")]
 position = Vector2(-10, 0)
 dimentions = Vector2(20, 700)
 
-[node name="Wall" parent="." instance=ExtResource("3_a0vej")]
+[node name="Wall2" parent="Walls" instance=ExtResource("3_a0vej")]
 position = Vector2(1160, 0)
 dimentions = Vector2(20, 700)
 
-[node name="Wall2" parent="." instance=ExtResource("3_a0vej")]
+[node name="Wall3" parent="Walls" instance=ExtResource("3_a0vej")]
 position = Vector2(0, -10)
 dimentions = Vector2(1160, 20)
 
-[node name="Wall3" parent="." instance=ExtResource("3_a0vej")]
+[node name="Wall4" parent="Walls" instance=ExtResource("3_a0vej")]
 position = Vector2(0, 658)
 dimentions = Vector2(1160, 20)
+
+[node name="Boids" type="Node" parent="."]
+
+[node name="Boid" parent="Boids" instance=ExtResource("1_fvjvj")]
+position = Vector2(754, 500)
